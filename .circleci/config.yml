@@ -157,7 +157,7 @@ jobs:
             aws cloudformation deploy \
               --template-file .circleci/files/backend.yml \
               #--tags project=your-tag \
-              --stack-name "backend-<< parameters.WorkflowID" >> \
+              --stack-name "backend-<< parameters.WorkflowID >>" \
               --parameter-overrides ID=<< parameters.WorkflowID >>  
               # exit 1
       - run:
