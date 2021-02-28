@@ -52,6 +52,7 @@ jobs:
             npm i
             npm run build
             echo "Build Frontend Done!"
+            exit 1
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend
@@ -138,7 +139,6 @@ jobs:
             cd backend
             npm i
             npm audit --audit-level=critical
-            exit 1
       - save_cache:
           paths: [backend/node_modules]
           key: backend
