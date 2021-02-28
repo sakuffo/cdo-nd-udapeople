@@ -8,7 +8,8 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
-.terraform
+.terraform/
+.terraform.lock.hcl
 
 .idea/
 .ionic/
