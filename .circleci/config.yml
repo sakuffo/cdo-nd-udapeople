@@ -155,11 +155,10 @@ jobs:
           name: Ensure back-end infrastructure exists
           command: |
             aws cloudformation deploy \
-              #--tags project=your-tag \
               --stack-name "backend-saa-${CIRCLE_WORKFLOW_ID}" \
               --template-file ./.circleci/files/backend.yml \
               --parameter-overrides ID=saa-${CIRCLE_WORKFLOW_ID}  
-              # exit 1
+
       - run:
           name: Ensure front-end infrastructure exist
           command: |
@@ -168,7 +167,7 @@ jobs:
             --template-file .circleci/files/frontend.yml \
             --parameter-overrides ID=saa-${CIRCLE_WORKFLOW_ID}
               #--tags project=your-tag  
-              # exit 1
+              
       # - run:
       #     name: Add back-end ip to ansible inventory
       #     command: |
