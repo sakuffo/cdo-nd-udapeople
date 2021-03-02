@@ -171,8 +171,8 @@ jobs:
       - run:
           name: packages
           command: |
-            sudo yum install tar -y
-            sudo yum install gzip -y
+            yum install tar -y
+            yum install gzip -y
               
       # - run:
       #     name: Add back-end ip to ansible inventory
