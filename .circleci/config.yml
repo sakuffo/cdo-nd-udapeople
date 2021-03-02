@@ -326,7 +326,7 @@ workflows:
       #     requires: [build-frontend]
       - deploy-infrastructure:
           context:
-            -aws-account-personal
+            - aws-account-personal
       #     requires: [test-backend, scan-frontend, scan-backend]
       #     filters:
       #       branches:
